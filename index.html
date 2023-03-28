@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<head>
+    <!-- 基础信息 -->
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="force-rendering" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人主页</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+    <link rel="icon" href="./favicon.ico">
+    <!--引入SweetAlert
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+    <!--引入izitoast-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
+    <!--引入fontawesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css"
+        media="all">
+    <!--IE淘汰计划-->
+    <script>if (false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href = "https://imsyy.top/upgrade-your-browser/index.html?referrer=" + encodeURIComponent(window.location.href);</script>
+    
+   
+</head>
+    <header id="panel" class="panel-cover">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <div class="ih-item circle effect right_to_left">
+                            <div class="img"><img src="./images/logo.png" alt="img" class="js-avatar iUp profilepic">
+                            </div>
+                    </div>
+                    <h1 class="panel-cover__title panel-title iUp">
+                        <br />hello
+                    </h1>
+                    <p class="panel-cover__subtitle panel-subtitle iUp">I live in Ningbo, China, not far from the airport, <br /> near the subway station. Welcome to play with me. </p>
+                    <hr class="panel-cover__divider iUp" />
+                    <!--一言无法显示时的文字-->
+                    <p id="description" class="panel-cover__description iUp">每一个人都应该明确自己的方向和位置
+                        <br />
+                    </p>
+                        <div class="iUp">
+                            <nav class="cover-navigation navigation--social">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="https://github.com/Najest" title="Github" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                            <span class="label">Github</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="https://twitter.com/najestyang" title="Twitter" target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                            <span class="label">Twitter</span>
+                                        </a>
+                                    </li>
+									<li class="navigation__item">
+                                        <a href="https://www.facebook.com/yangjitong" title="Facebook" target="_blank">
+                                            <i class="fab fa-facebook"></i>
+                                            <span class="label">facebook</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a onclick="Wechat()" title="Wechat" target="_blank">
+                                            <i class="fab fa-weixin"></i>
+                                            <script>
+                                                function Wechat() {
+                                                    Swal.fire({
+                                                        text: "请使用微信扫一扫",
+                                                        confirmButtonText: "谢谢",
+                                                        imageUrl: "./images/weixin.png",
+                                                        imageWidth: 200,
+                                                        imageHeight: 200
+                                                    })
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="mailto:sereric@najest.com" title="Email">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="label">Email</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="https://life.najest.com/" title="Notepad" target="_blank">
+                                            <i class="fas fa-sticky-note"></i>
+                                            <span class="label">Life</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay cover-slate"></div>
+        <div class="remark iUp">
+            <p class="power"> © <script>document.write('2017-' + (new Date()).getFullYear())</script> <a href="https://najest.github.io/">Poor Strange Technology Studio</a>        </p>
+        </div>
+        <!-- 客户端信息 -->    <div id="fps" style="z-index:5;position:fixed;bottom:3px;left:3px;color:#2196F3;font-size:10px;-webkit-pointer-events: none;    -moz-pointer-events: none;    -ms-pointer-events: none;    -o-pointer-events: none;">
+        </div>
+
+    </header>
+    <!--izitoast弹窗设置-->
+    <script>
+        iziToast.settings({
+            timeout: 4000,//调试
+            icon: 'Fontawesome',
+            closeOnEscape: 'true',
+            position: 'topRight',
+            transitionOut: 'fadeOutRight',
+            displayMode: '2',
+            layout: '2',
+            transitionIn: 'bounceInLeft',
+        });
+    </script>
+    <!--izitoast内容-->
+    <script>
+        function update() {
+            iziToast.info({
+                icon: 'fad fa-times-octagon',
+                backgroundColor: '#efefef',
+                title: '站点暂时关闭',
+                message: '只是出现了一点小问题 ~'
+            });
+        }
+    </script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/fetch.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    
+   
+    
+</body>
+</html>
