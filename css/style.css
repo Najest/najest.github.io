@@ -9,6 +9,9 @@ html {
 body {
   margin: 0
 }
+body {
+	    background-image: url(https://pic.imgdb.cn/item/657fad9cc458853aef94e836.png);    
+	}
 
 .ih-item.circle.effect {
   margin: 0 auto;
