@@ -38,20 +38,6 @@ $(document).ready(function () {
 		console.error(err);
 	})
 
-
-	// var url = 'https://query.yahooapis.com/v1/public/yql' + 
-	// '?q=' + encodeURIComponent('select * from json where url=@url') +
-	// '&url=' + encodeURIComponent('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=8') +
-	// '&format=json&callback=?';
-
-
-	$(".iUp").each(function (i, e) {
-		iUp.up(e);
-	});
-
-	$(".js-avatar")[0].onload = function () {
-		$(".js-avatar").addClass("show");
-	}
 });
 
 $('.btn-mobile-menu__icon').click(function () {
