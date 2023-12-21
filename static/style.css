@@ -2,7 +2,7 @@ body {
     font-size: 18px;
     color: #6c767d;
     background-color: #ebf1f5;
-    background-image: url("https://pic.imgdb.cn/item/65840070c458853aef1665cb.jpg");
+    background-image: url("https://pic.imgdb.cn/item/65840601c458853aef26226e.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -145,15 +145,11 @@ strike {
 }
 
 .photo-bg {
-    background-image: url(https://pic.imgdb.cn/item/657fad9cc458853aef94e836.png);
+    background-image: url(https://pic.imgdb.cn/item/625e88d0239250f7c5c054d0.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.photo-bg {
-            /* 卡片左侧图片 */
-            background-image: url("https://pic.imgdb.cn/item/6584036fc458853aef1edf8c.jpg");
-        }
 
 footer p {
     font-size: 12px;
