@@ -150,6 +150,10 @@ strike {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.photo-bg {
+            /* 卡片左侧图片 */
+            background-image: url("https://pic.imgdb.cn/item/6584036fc458853aef1edf8c.jpg");
+        }
 
 footer p {
     font-size: 12px;
