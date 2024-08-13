@@ -76,7 +76,8 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Najest's Blog" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -300,11 +301,29 @@
   
     <article id="comments" lazyload>
       
-  <div id="SOHUCS" sid=''></div>
+  <div id="valine"></div>  
   <script type="text/javascript">
-    Fluid.utils.loadComments('#SOHUCS', function() {
-      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
-        window.changyan.api.config({"appid":"cyxrxsXta","appkey":"1fa7dc06a27e26b55dd999d1234fce94"})
+    fetch('https://v1.hitokoto.cn')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+      })
+      .catch(console.error)
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"rUPdLcbUzWskbuzOJrkEjdy4-MdYXbMMI","appKey":"oIWUWTWBbw4bWdsI65iuTw1D","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://rupdlcbu.api.lncldglobal.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
       });
     });
   </script>
