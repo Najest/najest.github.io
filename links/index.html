@@ -269,14 +269,8 @@
   
     <article id="comments" lazyload>
       
-  <div id="valine"></div>  
+  <div id="valine"></div>
   <script type="text/javascript">
-    fetch('https://v1.hitokoto.cn')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
-      })
-      .catch(console.error)
     Fluid.utils.loadComments('#valine', function() {
       Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
         var options = Object.assign(
